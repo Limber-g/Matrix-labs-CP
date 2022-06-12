@@ -3,4 +3,6 @@ project(Labs_1_4_second_module)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Labs_1_4_second_module main.cpp Matrix.cpp Matrix.h first_prac.cpp)
+add_library(Matrix Matrix.h Matrix.cpp)
+add_executable(Labs_1_4_second_module main.cpp)
+target_link_libraries(Labs_1_4_second_module Matrix)
